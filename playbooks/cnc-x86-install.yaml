@@ -1,4 +1,4 @@
-- hosts: master
+- hosts: all
   vars_files:
     - cnc_values.yaml
   environment:
@@ -218,7 +218,7 @@
      shell: "{{ kubeadm_join }}"
      when: "'running' not in k8sup.stdout"
 
-- hosts: master
+- hosts: all
   vars_files:
     - cnc_values.yaml
   tasks:
