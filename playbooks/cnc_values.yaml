@@ -2,7 +2,7 @@ cnc_version: 6.1
 
 # GPU Operator Values
 gpu_driver_version: "510.47.03"
-enable_mig: no
+enable_mig: yes
 mig_profile: all-disabled
 enable_gds: no
 enable_secure_boot: no
