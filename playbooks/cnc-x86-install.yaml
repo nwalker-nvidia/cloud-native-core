@@ -4,6 +4,7 @@
   environment:
     http_proxy: "{{ http_proxy }}"
     https_proxy: "{{ https_proxy }}"
+    KUBECONFIG: /etc/kubernetes/admin.conf
   tasks:
    - name: Validate whether Kubernetes cluster installed
      shell: kubectl cluster-info
@@ -221,6 +222,8 @@
 - hosts: all
   vars_files:
     - cnc_values.yaml
+  environment:
+    KUBECONFIG: /etc/kubernetes/admin.conf
   tasks:
    - name: Validate whether Kubernetes cluster installed
      shell: kubectl cluster-info
