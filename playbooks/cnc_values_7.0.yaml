@@ -3,10 +3,10 @@
 # GPU Operator Values
 #gpu_driver_version: "510.47.03"
 gpu_driver_version: "515.48.07"
-enable_mig: no
+enable_mig: yes
 mig_profile: all-disabled
-mig_strategy: single
-enable_gds: no
+mig_strategy: mixed
+enable_gds: yes
 enable_secure_boot: no
 enable_vgpu: no
 vgpu_license_server: ""
@@ -22,9 +22,9 @@ cnc_validation: no
 
 # Network Operator Values
 ## If the Network Operator is yes then make sure enable_rdma as well yes
-enable_network_operator: no
+enable_network_operator: yes
 ## Enable RDMA yes for NVIDIA Certification
-enable_rdma: no
+enable_rdma: yes
 
 # Prxoy Configuration
 proxy: no
